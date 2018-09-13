@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Parse text</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous">
+
+    <style>
+        body {
+            margin-top: 20px;
+        }
+
+        textarea {
+            height: 80vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <textarea placeholder="Input" class="form-control" id="input" name="input"></textarea>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div id="inputs-wrapper">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <input class="regex" value="1" type="checkbox">
+                            </div>
+                        </div>
+                        <input type="text" id="regex1Input" placeholder="i.e. \n([^0-9])" class="form-control">
+                        <input type="text" id="regex1Output" placeholder="i.e. $1" class="form-control">
+                    </div>
+                    <div class="input-group mt-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <input class="regex" value="2" type="checkbox">
+                            </div>
+                        </div>
+                        <input type="text" id="regex2Input" class="form-control">
+                        <input type="text" id="regex2Output" class="form-control">
+                    </div>
+                </div>
+                <button id="process" class="btn btn-info rounded-1 btn-block mt-2">Find & replace</button>
+                <hr>
+                <div class="float-right">
+                    <button type="button" id="add" class="btn btn-secondary">Add</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <textarea placeholder="Output" class="form-control textarea-small" id="output"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/source.js"></script>
+</body>
+
+</html>
